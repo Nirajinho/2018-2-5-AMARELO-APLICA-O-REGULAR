@@ -1,0 +1,19 @@
+from PIL import Image
+import os
+def converter_cor_gimp_para_rgb(gimp_r, gimp_g, gimp_b):
+Converte valores do GIMP (0-100) paгa RGB (0-255)
+rint((gimp_r/100) 255)
+g = int((gimp_g/100) 255)
+b=int((gimp b/100)* 255)
+return (r, g, b)
+I
+def encontrar_faixa_cinza (imagem, cor_alvo (209, 210, 212), tolerancia-15, altura_base z = 28 , margem_erro=3):
+Encontra posições onde há uma faixa horizontal da cor especificada.
+Analisa o ULTIMO e o PENULTIMO pixel da direita com margem de erro na altura.
+largura, altura imagem.size
+pixels imagem.load()
+posicoes_corte = []
+min_altura altura_base margem_erro
+#25 pixels
+max_altura altura_base + margem_erro
+#31 pixels  
