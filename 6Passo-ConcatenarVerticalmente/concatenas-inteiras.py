@@ -55,6 +55,6 @@ for img in imagens:
     y += img.height
 
 # Salvar
-imagem_final.save(os.path.join(pasta_saida, 'inteiras_concatenadas_verticalmente.png'))
+imagem_final.save(os.path.join(pasta_saida, 'inteiras   _concatenadas_verticalmente.png'))
 print("Imagens concatenadas na ordem correta!")
 print(f"Ordem dos arquivos: {arquivos}")
