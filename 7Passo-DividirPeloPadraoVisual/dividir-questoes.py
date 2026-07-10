@@ -24,10 +24,10 @@ def encontrar_faixa_cinza(imagem, cor_alvo=(209, 210, 212), tolerancia=15, altur
                     abs(g - cor_alvo[1]) <= tolerancia and 
                     abs(b - cor_alvo[2]) <= tolerancia)
 
-        if pixel_correta(largura - 2, y) or pixel_correta(largura - 1, y):
+        if pixel_correta(largura - 3, y) or pixel_correta(largura - 1, y):
             inicio_faixa = y
             
-            while y < altura and (pixel_correta(largura - 2, y) or pixel_correta(largura - 1, y)):
+            while y < altura and (pixel_correta(largura - 3, y) or pixel_correta(largura - 1, y)):
                 y += 1
                 
             altura_detectada = y - inicio_faixa
@@ -97,7 +97,7 @@ def dividir_imagem_por_faixas(caminho_imagem, pasta_saida):
 
 if __name__ == "__main__":
     caminho_imagem = "inteiras_concatenadas_verticalmente.png"  
-    pasta_saida = "questoes_divididas" 
+    pasta_saida = "inteiras_colunas" 
     
     dividir_imagem_por_faixas(caminho_imagem, pasta_saida)
     print("Divisão concluída! Os padrões visuais agora estão no topo de cada imagem correspondente.")
